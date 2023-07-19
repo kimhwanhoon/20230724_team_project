@@ -1,12 +1,17 @@
 import React from 'react';
-import { styled } from 'styled-components';
+import { styled, keyframes } from 'styled-components';
 import { useQuery } from 'react-query';
 import { useCurrentLocation } from '../../hooks/useCurrentLocation';
-import { positionOption } from '../../constants/positionOption';
 import { getWeatherData } from '../../axios/weatherApi';
+import { useState } from 'react';
 
 export const Weather = () => {
-  const { location, error } = useCurrentLocation(positionOption);
+  const [isLocationRequested, setIsLocationRequested] = useState(false);
+  const { location, error } = useCurrentLocation();
+
+  const handleLocationRequest = () => {
+    setIsLocationRequested(true);
+  };
 
   const dateBuilder = (d) => {
     let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -18,7 +23,7 @@ export const Weather = () => {
     let date = d.getDate();
     let hours = d.getHours().toString().padStart(2, '0');
     let minutes = d.getMinutes().toString().padStart(2, '0');
-    // return `${day} ${date} ${month} ${year}`;
+
     return (
       <DateBuild>
         <h3>&nbsp;{`${hours}:${minutes}`}&nbsp;&nbsp;&nbsp;</h3>
@@ -36,26 +41,26 @@ export const Weather = () => {
   });
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <Alert>Error: {error}</Alert>;
   }
 
   if (!location) {
-    return <div>Loading...</div>;
+    return <Alert>Loading...</Alert>;
   }
 
   if (isLoading) {
-    return <div>Loading weather data...</div>;
+    return <Alert>Loading weather data...</Alert>;
   }
 
   if (isError) {
-    return <div>Error occurred while fetching weather data</div>;
+    return <Alert>Error occurred while fetching weather data</Alert>;
   }
 
   const { name, weather, main } = weatherData;
   // const currentDate = new Date();
 
   return (
-    <WeatherContainer>
+    <>
       <WeatherWrapper>
         <WeatherInner>
           <WeatherImg src={`http://openweathermap.org/img/wn/${weather[0].icon}.png`} alt="Weather Icon" />
@@ -64,44 +69,71 @@ export const Weather = () => {
         </WeatherInner>
         <LocationName>{name}</LocationName>
       </WeatherWrapper>
-    </WeatherContainer>
+    </>
   );
 };
 
-const WeatherContainer = styled.div`
+const Alert = styled.div`
+  width: 340px;
+  height: 72px;
   display: flex;
-  justify-content: flex-end;
-  padding-right: 50px;
-
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px 30px;
+  align-items: center;
+  justify-content: center;
+  color: rgba(225, 225, 225, 0.795);
   border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+
+  background-color: rgba(225, 225, 225, 0.362);
+`;
+
+const growAnimation = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 `;
 
 const WeatherWrapper = styled.div`
+  height: 72px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(182, 182, 182, 0.25);
+  vertical-align: middle;
+  background-color: rgba(225, 225, 225, 0.362);
   border-radius: 20px;
   box-shadow: 10px 10px 10px rgba(70, 70, 70, 0.72);
+  cursor: pointer;
+
+  &:hover {
+    animation: ${growAnimation} 0.5s ease-in-out;
+    background-color: rgba(225, 225, 225, 0.45);
+  }
 `;
 
 const WeatherImg = styled.img`
-  width: 50px;
+  width: 60px;
 `;
 
 const WeatherInner = styled.div`
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(223, 223, 223, 0.488);
+  background-color: rgba(225, 225, 225, 0.362);
   padding: 0px 20px;
   border-radius: 20px 20px 0 0;
+  margin-top: 6px;
 `;
 const LocationName = styled.div`
-  padding: 10px 0;
+  padding: 2px 0 12px;
   font-weight: 600;
 `;
 
