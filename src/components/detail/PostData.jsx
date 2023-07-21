@@ -42,6 +42,16 @@ const PostData = ({ setFacility, facility }) => {
       <ConDiv>
         <div>{facility.TELNO ? `연락처: ${facility.TELNO}` : `연락처:"없음"`}</div>
       </ConDiv>
+      <div>
+        <Btn onClick={openLink}>예약하러가기</Btn>
+        <Btn
+          onClick={() => {
+            setFacility(null);
+          }}
+        >
+          뒤로가기
+        </Btn>
+      </div>
     </PostBOX>
   );
 };
@@ -73,12 +83,16 @@ const Img = styled.img`
   }
 `;
 const ContentHover = styled.div`
-  border: 1px solid black;
+  padding: 12px 10px;
+  background-color: rgba(138, 138, 138, 0.788);
+  border-radius: 10px;
   margin: 10px;
   width: 400px;
-  height: 60px;
+  height: 80px;
   overflow: hidden;
   line-height: 20px;
+
+  overflow: hidden;
 `;
 
 const PostBOX = styled.div`
@@ -91,27 +105,21 @@ const PostBOX = styled.div`
 const ConDiv = styled.div`
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  padding: 12px;
+  background-color: rgba(138, 138, 138, 0.788);
+  border-radius: 10px;
   margin: 10px;
-  padding: 4px 8px;
 `;
-// const Content = styled.div`
-//   border: 1px solid black;
-//   margin: 10px;
 
-//   width: 140px;
-//   height: 20px;
-//   overflow: hidden;
-//   line-height: 20px;
-//   color: white;
-// `;
-// const ContentCont = styled.div`
-//   border: 1px solid black;
-//   margin: 10px;
-
-//   width: 400px;
-//   height: 60px;
-//   overflow: hidden;
-//   line-height: 20px;
-//   color: white;
-// `;
+const Btn = styled.button`
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(68, 68, 68, 0.671);
+  border: none;
+  color: rgba(212, 212, 212, 0.771);
+  cursor: pointer;
+  &:hover {
+    animation: ${growAnimation} 0.5s ease-in-out;
+    background-color: rgba(138, 138, 138, 0.788);
+  }
+`;
