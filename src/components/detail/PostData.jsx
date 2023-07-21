@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { styled } from 'styled-components';
+import { keyframes, styled } from 'styled-components';
 
 const PostData = ({ setFacility, facility }) => {
   const openLink = () => {
@@ -14,53 +14,68 @@ const PostData = ({ setFacility, facility }) => {
     <PostBOX>
       <div>
         <Img src={facility.IMGURL} />
-        <ContentHover>{facility.DTLCONT}</ContentHover>
+        <ContentHover>자세한 내용은 홈페이지를 참고해 주세요!</ContentHover>
+        <div>
+          <button onClick={openLink}>예약하러가기</button>
+          <button
+            onClick={() => {
+              setFacility(null);
+            }}
+          >
+            뒤로가기
+          </button>
+        </div>
       </div>
       <ConDiv>
-        <div>{facility.MAXCLASSNM}</div>&nbsp;&nbsp;
-        <div>{facility.MINCLASSNM}</div>
+        <div>장소명:&nbsp;{facility.PLACENM}</div>
       </ConDiv>
       <ConDiv>
-        <div>{facility.PLACENM}</div>&nbsp;&nbsp;
-        <div>{facility.AREANM}</div>
-      </ConDiv>
-      <ConDiv>
-        <div>{facility.SVCOPNBGNDT}</div>&nbsp;&nbsp;
-        <div>{facility.SVCOPNENDDT}</div>
-      </ConDiv>
-      <ConDiv>
-        <div>{facility.RCPTBGNDT}</div>&nbsp;&nbsp;
+        <div>접수기간:&nbsp;{facility.RCPTBGNDT}</div>&nbsp;&nbsp;~
         <div>{facility.RCPTENDDT}</div>
       </ConDiv>
       <ConDiv>
-        <div>{facility.SVCSTATNM}</div>&nbsp;&nbsp;
-        <div>{facility.PAYATNM}</div>
+        <div>이용요금:&nbsp;{facility.PAYATNM}</div>&nbsp;&nbsp;
       </ConDiv>
-      <div>
-        <button onClick={openLink}>예약하러가기</button>
-        <button
-          onClick={() => {
-            setFacility(null);
-          }}
-        >
-          뒤로가기
-        </button>
-      </div>
+      <ConDiv>
+        <div>이용시간:&nbsp;{facility.V_MIN}</div>&nbsp;&nbsp;~
+        <div>{facility.V_MAX}</div>
+      </ConDiv>
+      <ConDiv>
+        <div>{facility.TELNO ? `연락처: ${facility.TELNO}` : `연락처:"없음"`}</div>
+      </ConDiv>
     </PostBOX>
   );
 };
-
+// 연락처:&nbsp;{facility.TELNO}
 export default PostData;
 
+const growAnimation = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
 const Img = styled.img`
   width: 400px;
   height: 250px;
   border-radius: 14px;
+  cursor: pointer;
+  &:hover {
+    animation: ${growAnimation} 0.5s ease-in-out;
+    background-color: rgba(225, 225, 225, 0.45);
+    /* transform: scale(1.1);
+    transition: transform 0.5s; */
+    filter: brightness(70%);
+  }
 `;
 const ContentHover = styled.div`
   border: 1px solid black;
   margin: 10px;
-
   width: 400px;
   height: 60px;
   overflow: hidden;
