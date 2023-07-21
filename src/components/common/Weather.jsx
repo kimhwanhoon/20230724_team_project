@@ -74,7 +74,7 @@ const Weather = () => {
   }
 
   const { name, weather, main } = weatherData;
-  // const currentDate = new Date();
+  // const currentDate = new Date();!
   return (
     <>
       <WeatherWrapper>
