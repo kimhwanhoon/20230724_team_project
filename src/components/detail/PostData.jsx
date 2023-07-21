@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { keyframes, styled } from 'styled-components';
 
 const PostData = ({ setFacility, facility }) => {
