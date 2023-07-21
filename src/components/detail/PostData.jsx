@@ -1,5 +1,5 @@
 import React from 'react';
-import { keyframes, styled } from 'styled-components';
+import { styled } from 'styled-components';
 
 const PostData = ({ setFacility, facility }) => {
   const openLink = () => {
@@ -11,115 +11,129 @@ const PostData = ({ setFacility, facility }) => {
   }
   return (
     <PostBOX>
-      <div>
-        <Img src={facility.IMGURL} />
-        <ContentHover>자세한 내용은 홈페이지를 참고해 주세요!</ContentHover>
-        <div>
-          <button onClick={openLink}>예약하러가기</button>
-          <button
-            onClick={() => {
-              setFacility(null);
-            }}
-          >
-            뒤로가기
-          </button>
+      <button
+        id="detail-go-back"
+        onClick={() => {
+          setFacility(null);
+        }}
+      >
+        뒤로가기
+      </button>
+      <div id="detail-image-container">
+        <img src={facility.IMGURL} alt="facility img" />
+        <div id="facility-title">{facility.MAXCLASSNM}</div>
+      </div>
+      <div id="detail-title-container">
+        <h1>{facility.MINCLASSNM}</h1>
+        <div id="detail-status-info">
+          <p>{facility.PAYATNM}</p>
+          <p>{facility.SVCSTATNM}</p>
         </div>
       </div>
-      <ConDiv>
-        <div>장소명:&nbsp;{facility.PLACENM}</div>
-      </ConDiv>
-      <ConDiv>
-        <div>접수기간:&nbsp;{facility.RCPTBGNDT}</div>&nbsp;&nbsp;~
-        <div>{facility.RCPTENDDT}</div>
-      </ConDiv>
-      <ConDiv>
-        <div>이용요금:&nbsp;{facility.PAYATNM}</div>&nbsp;&nbsp;
-      </ConDiv>
-      <ConDiv>
-        <div>이용시간:&nbsp;{facility.V_MIN}</div>&nbsp;&nbsp;~
-        <div>{facility.V_MAX}</div>
-      </ConDiv>
-      <ConDiv>
-        <div>{facility.TELNO ? `연락처: ${facility.TELNO}` : `연락처:"없음"`}</div>
-      </ConDiv>
-      <div>
-        <Btn onClick={openLink}>예약하러가기</Btn>
-        <Btn
-          onClick={() => {
-            setFacility(null);
-          }}
-        >
-          뒤로가기
-        </Btn>
+      <div id="detail-divider"></div>
+      <div id="detail-title">
+        <div>장소명: {facility.PLACENM}</div>
+        <div>소재구: {facility.AREANM}</div>
+        <button id="detail-book" onClick={openLink}>
+          예약하기
+        </button>
       </div>
+      <div id="detail-divider-2"></div>
+      <div>
+        <div>{facility.TELNO ? `연락처: ${facility.TELNO}` : `연락처: "없음"`}</div>
+      </div>
+      <h5>상세설명:</h5>
+      <p id="detail-detail">{facility.DTLCONT}</p>
     </PostBOX>
   );
 };
 // 연락처:&nbsp;{facility.TELNO}
 export default PostData;
 
-const growAnimation = keyframes`
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-`;
-const Img = styled.img`
-  width: 400px;
-  height: 250px;
-  border-radius: 14px;
-  cursor: pointer;
-  &:hover {
-    animation: ${growAnimation} 0.5s ease-in-out;
-    background-color: rgba(225, 225, 225, 0.45);
-    /* transform: scale(1.1);
-    transition: transform 0.5s; */
-    filter: brightness(70%);
-  }
-`;
-const ContentHover = styled.div`
-  padding: 12px 10px;
-  background-color: rgba(138, 138, 138, 0.788);
-  border-radius: 10px;
-  margin: 10px;
-  width: 400px;
-  height: 80px;
-  overflow: hidden;
-  line-height: 20px;
-
-  overflow: hidden;
-`;
-
 const PostBOX = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: center;
-  color: white;
-`;
+  gap: 1rem;
+  position: relative;
+  overflow: auto;
+  #detail-divider {
+    width: 30%;
+    height: 2px;
+    border: 2px white solid;
+  }
+  #detail-divider-2 {
+    width: 100%;
+    height: 1px;
+    border: 0.5px white solid;
+  }
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  #facility-title {
+    position: absolute;
+    padding: 5px 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    color: #333;
+    font-weight: 700;
+    top: 0;
+    left: 0;
+  }
+  #detail-title-container {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      font-size: 1.5rem;
+      color: #eee;
+      font-weight: 600;
+    }
+    p {
+      padding: 3px 6px;
+      background-color: #fafafa;
+      color: #333;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
+  }
+  #detail-status-info {
+    display: flex;
+    gap: 5px;
+  }
 
-const ConDiv = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-  background-color: rgba(138, 138, 138, 0.788);
-  border-radius: 10px;
-  margin: 10px;
-`;
+  #detail-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  #detail-detail {
+    margin: 0 auto;
+    line-height: 1.3;
+    width: 90%;
+    color: #ddd;
+    font-size: 0.9rem;
+    text-align: justify;
+  }
 
-const Btn = styled.button`
-  padding: 10px;
-  border-radius: 8px;
-  background-color: rgba(68, 68, 68, 0.671);
-  border: none;
-  color: rgba(212, 212, 212, 0.771);
-  cursor: pointer;
-  &:hover {
-    animation: ${growAnimation} 0.5s ease-in-out;
-    background-color: rgba(138, 138, 138, 0.788);
+  #detail-book {
+    padding: 7px 20px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    border: none;
+    background-color: #233c50;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      background-color: #2b4a63;
+    }
+  }
+  #detail-go-back {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 `;
