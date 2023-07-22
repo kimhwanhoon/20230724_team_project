@@ -143,7 +143,7 @@ React에 다양한 API로 서울시의 체육시설 공공서비스 예약안내
 ### ⚙️ 기술스택
 - React.js
 <div align=“center”>
-    <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=git&logoColor=white">
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black">
     
 </div> 
 
