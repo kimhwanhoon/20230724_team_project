@@ -12,7 +12,7 @@
 
 ## 🖥️ 프로젝트 소개
 
-React에 다양한 API들로 서울시의 체육시설 공공서비스 예약안내 사이트입니다.
+React에 다양한 API로 서울시의 체육시설 공공서비스 예약안내 사이트입니다.
 
 ## 사이트 주소
 
@@ -31,7 +31,74 @@ React에 다양한 API들로 서울시의 체육시설 공공서비스 예약안
 팀원|조성록|날씨API 상세 페이지, 댓글 기능|<a href="https://github.com/pigrok">https://github.com/pigrok</a>
 팀원|최수아|공공API 데이터 검색 및 필터 기능|<a href="https://github.com/choisua98">https://github.com/choisua98</a>|
 
-🎬 페이지 스크린샷
+
+### 🖼 와이어프레임
+<details>
+<summary>클릭하면 자세한 내용이 보입니다</summary>
+Figma: https://www.figma.com/community/file/1264539931329446342
+//
+</details>
+
+
+### 🏷 폴더 구조
+```
+┣ 📂axios
+ ┃ ┣ 📜comment.js
+ ┃ ┣ 📜publicDataAPI.js
+ ┃ ┗ 📜weatherApi.js
+ ┣ 📂components
+ ┃ ┣ 📂common
+ ┃ ┃ ┣ 📜Footer.jsx
+ ┃ ┃ ┣ 📜Header.jsx
+ ┃ ┃ ┣ 📜Layout.jsx
+ ┃ ┃ ┣ 📜Weather.jsx
+ ┃ ┃ ┗ 📜YouTubeApi.jsx
+ ┃ ┣ 📂detail
+ ┃ ┃ ┣ 📜Comments.jsx
+ ┃ ┃ ┣ 📜Detail.jsx
+ ┃ ┃ ┗ 📜PostData.jsx
+ ┃ ┣ 📂map
+ ┃ ┃ ┣ 📜MapComponent.jsx
+ ┃ ┃ ┣ 📜Maps.jsx
+ ┃ ┃ ┗ 📜MarkPins.jsx
+ ┃ ┣ 📜Facilities.jsx
+ ┃ ┣ 📜Paging.jsx
+ ┃ ┗ 📜Search.jsx
+ ┣ 📂helper
+ ┃ ┗ 📜calDistance.js
+ ┣ 📂hooks
+ ┃ ┣ 📂mapHooks
+ ┃ ┃ ┣ 📜saveBoundary.js
+ ┃ ┃ ┣ 📜setBoundaries.js
+ ┃ ┃ ┗ 📜useGetCoords.js
+ ┃ ┣ 📜useCurrentLocation.js
+ ┃ ┗ 📜useFetchPublicData.js
+ ┣ 📂pages
+ ┃ ┣ 📜Home.jsx
+ ┃ ┗ 📜Homebackup.jsx
+ ┣ 📂redux
+ ┃ ┣ 📂config
+ ┃ ┃ ┗ 📜configStore.js
+ ┃ ┗ 📂modules
+ ┃ ┃ ┣ 📂maps
+ ┃ ┃ ┃ ┣ 📜coordsGroup.js
+ ┃ ┃ ┃ ┣ 📜reloadMap.js
+ ┃ ┃ ┃ ┣ 📜save10Location.js
+ ┃ ┃ ┃ ┗ 📜setBoundary.js
+ ┃ ┃ ┣ 📜commentsSlice.js
+ ┃ ┃ ┣ 📜publicData.js
+ ┃ ┃ ┗ 📜userLocation.js
+ ┣ 📂shared
+ ┃ ┗ 📜Router.js
+ ┣ 📜.DS_Store
+ ┣ 📜App.css
+ ┣ 📜App.js
+ ┣ 📜GlobalStyle.jsx
+ ┣ 📜index.css
+ ┣ 📜index.js
+ ┗ 📜reset.css
+```
+### 🎬 페이지 스크린샷
 1) 
 
 <img src="" alt="" />
@@ -96,9 +163,6 @@ React에 다양한 API들로 서울시의 체육시설 공공서비스 예약안
 <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=git&logoColor=white">
 
 </div> 
-
-### ⚙️ 사용한 API
-공공데이터API와 지도API
 
 ### ⚙️ 버전 관리 시스템
 - Git/Github
