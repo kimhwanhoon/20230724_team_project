@@ -69,23 +69,32 @@ React에 다양한 API들로 서울시의 체육시설 공공서비스 예약안
 
 
 ### ⚙️ 기술스택
-- React
-- styled-components
-
+- React.js
 <div align=“center”>
     <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=git&logoColor=white">
-    <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=git&logoColor=white">
+    
 </div> 
 
 ### ⚙️ 사용한 라이브러리
+- styled-components
 - react-router-dom
-- redux
-- DOMPurify
-- react-quill
+- redux-toolkit
+- redux-devtools-extension
+- react-query
+- react-query-devtools
+- react-js-paginaition
+- react-redux
+- react-naver-maps
+- axios
+- cors
+- dotenv
+- express
+- weather-styled-icon
+
+
 <div align=“center”>
-  <img src="https://img.shields.io/badge/createreactapp-09D3AC?style=for-the-badge&logo=git&logoColor=white">
-  <img src="https://img.shields.io/badge/redux-764ABC?style=for-the-badge&logo=git&logoColor=white">  
-  <img src="https://img.shields.io/badge/reactrouter-CA4245?style=for-the-badge&logo=git&logoColor=white">
+<img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=git&logoColor=white">
+
 </div> 
 
 ### ⚙️ 사용한 API
