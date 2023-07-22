@@ -41,7 +41,7 @@ Figma: https://www.figma.com/community/file/1264539931329446342
 
 ![456](https://github.com/kimhwanhoon/20230724_team_project/assets/123552221/938892b3-c550-49cd-b729-cd9fe73e206a)
 
-![](https://files.slack.com/files-pri/T043597JK8V-F05J9NAQSHZ/789.jpg)
+![789](https://github.com/kimhwanhoon/20230724_team_project/assets/123552221/33b1859d-c723-48fc-848a-ddb21ef87274)
 
 </details>
 
