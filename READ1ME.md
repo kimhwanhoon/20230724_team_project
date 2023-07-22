@@ -133,15 +133,16 @@
 
 ### 날씨API (Open Weather Map)
 #### : https://openweathermap.org/api
-- 
-- 
-- 
+- 현재 웹 브라우저 사용자의 위치를 통해 날씨 정보를 가져오는 API
+- 도시의 위치(경도, 위도)값을 매개변수로 하여 활용한다
+- json형태로 가져와서 현재 위치의 날씨 현황을 해당 날씨에 반환되는 icon으로 지역명과 함께 브라우저에 렌더링한다
+- 추가적으로 날짜와 현재 시간을 렌더링한다
 
 ### 유튜브API (YouTube)
 #### : https://developers.google.com/youtube/v3/getting-started?hl=ko
-- 
-- 
-- 
+- 타겟팅한 특정 채널의 ID 값을 활용하여 채널의 재생목록 List를 API로 가져온다
+- API 요청 매개변수와 일치하는 재생목록의 모음을 반환받아 axios get 요청으로 상세 데이터를 불러온다
+- 필요한 값을 return 해주며 List를 shuffle하여 브라우저에 렌더링한다
 
 ### 🎬 페이지 스크린샷
 1) 
