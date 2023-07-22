@@ -2,11 +2,10 @@
 
 ### 실행법
 
-1. `yarn`으로 패키지 설치
-2. `json-server --watch db.json --port 4000` 으로 JSON server 실행
-3. `node server.js`로 express 서버 실행
-4. `yarn start`로 클라이언트 실행
-
+> 1. `yarn`으로 패키지 설치
+> 2. `json-server --watch db.json --port 4000` 으로 JSON server 실행
+> 3. `node server.js`로 express 서버 실행
+> 4. `yarn start`로 클라이언트 실행
 
 
 # GongGongPlay
@@ -24,11 +23,13 @@ React에 다양한 API들로 서울시의 체육시설 공공서비스 예약안
 - 23.07.17 - 23.07.23
 
 ### 🧑‍🤝‍🧑 멤버 구성 - 팀명 : 내 코드 왜2러조
-- 팀원1 : 김환훈 - 
-- 팀원2 : 김우리 - weather API 렌더링(<Home/> -> <Header/>) / 유튜브 API shuffle 렌더링 / css Frame 
-- 팀원3 : 박지원 - 
-- 팀원4 : 조성록 - weather API 렌더링, 댓글 추가, 수정 및 삭제 기능 구현 / error shooter
-- 팀원5 : 최수아 - 
+역할|이름|맡은 기능 소개|GitHub|
+---|---|---|---|
+팀장|김환훈|지도 API|<a href="https://github.com/kimhwanhoon">https://github.com/kimhwanhoon</a>|
+팀원|김우리|상세 페이지, 유튜브 API|<a href="https://github.com/wooriki">https://github.com/wooriki</a>|
+팀원|박지원|공공API 데이터 페이지네이션|<a href="https://github.com/xoxojw">https://github.com/xoxojw</a>|
+팀원|조성록|날씨API 상세 페이지, 댓글 기능|<a href="https://github.com/pigrok">https://github.com/pigrok</a>
+팀원|최수아|공공API 데이터 검색 및 필터 기능|<a href="https://github.com/choisua98">https://github.com/choisua98</a>|
 
 🎬 페이지 스크린샷
 1) 
