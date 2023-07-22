@@ -8,33 +8,27 @@
 > 4. `yarn start`로 클라이언트 실행
 
 
-# GongGongPlay
+# GongGongPlay ⚽️🎾🏀
 
-## 🖥️ 프로젝트 소개
+## 🖥️ 프로젝트 개요
+- React.js로 빌드한 서울시 공공서비스 체육시설 조회 및 예약안내 사이트입니다.
 
-React에 다양한 API로 서울시의 체육시설 공공서비스 예약안내 사이트입니다.
+<br />
 
-## 사이트 주소
+### 📍 사이트 주소
+// 주소넣기
 
-//주소넣기
+<br />
 
-## 🕰️ 개발 기간
+### 🕰️ 개발 기간
+2023. 07. 17 - 2023. 07. 23
 
-- 23.07.17 - 23.07.23
-
-### 🧑‍🤝‍🧑 멤버 구성 - 팀명 : 내 코드 왜2러조
-역할|이름|맡은 기능 소개|GitHub|
----|---|---|---|
-팀장|김환훈|지도 API|<a href="https://github.com/kimhwanhoon">https://github.com/kimhwanhoon</a>|
-팀원|김우리|상세 페이지, 유튜브 API|<a href="https://github.com/wooriki">https://github.com/wooriki</a>|
-팀원|박지원|공공API 데이터 페이지네이션|<a href="https://github.com/xoxojw">https://github.com/xoxojw</a>|
-팀원|조성록|날씨API 상세 페이지, 댓글 기능|<a href="https://github.com/pigrok">https://github.com/pigrok</a>
-팀원|최수아|공공API 데이터 검색 및 필터 기능|<a href="https://github.com/choisua98">https://github.com/choisua98</a>|
-
+<br />
 
 ### 🖼 와이어프레임
 <details>
 <summary><a href="https://www.figma.com/community/file/1264539931329446342">Figma</a> | 펼칠 시 스크린샷</summary>
+<br />
 	
 ![123](https://github.com/kimhwanhoon/20230724_team_project/assets/123552221/45f102ee-ba89-442f-b7ea-4bc9cf0637e8)
 
@@ -42,8 +36,11 @@ React에 다양한 API로 서울시의 체육시설 공공서비스 예약안내
 
 ![789](https://github.com/kimhwanhoon/20230724_team_project/assets/123552221/33b1859d-c723-48fc-848a-ddb21ef87274)
 
+<br />
+
 </details>
 
+<br />
 
 ### 🏷 폴더 구조
 ```
@@ -103,6 +100,49 @@ React에 다양한 API로 서울시의 체육시설 공공서비스 예약안내
  ┣ 📜index.js
  ┗ 📜reset.css
 ```
+
+<br />
+
+## 🧑‍🤝‍🧑 팀원 소개
+- 팀명 : 내 코드 왜2러조
+- 팀원 및 맡은 기능
+  
+역할|이름|맡은 기능 소개|GitHub|
+---|---|---|---|
+팀장|김환훈|지도 API|<a href="https://github.com/kimhwanhoon">https://github.com/kimhwanhoon</a>|
+팀원|김우리|상세 페이지, 유튜브 API|<a href="https://github.com/wooriki">https://github.com/wooriki</a>|
+팀원|박지원|공공API 데이터 페이지네이션|<a href="https://github.com/xoxojw">https://github.com/xoxojw</a>|
+팀원|조성록|날씨API 상세 페이지, 댓글 기능|<a href="https://github.com/pigrok">https://github.com/pigrok</a>
+팀원|최수아|공공API 데이터 검색 및 필터 기능|<a href="https://github.com/choisua98">https://github.com/choisua98</a>|
+
+<br />
+
+## 📌 주요 기능
+
+### 지도API (네이버지도)
+#### : https://www.ncloud.com/product/applicationService/maps
+- 
+-  
+- 
+
+### 공공데이터API (서울시 체육시설 공공서비스 예약)
+#### : http://data.seoul.go.kr/dataList/OA-2266/S/1/datasetView.do
+- 
+- 
+- 
+
+### 날씨API (Open Weather Map)
+#### : https://openweathermap.org/api
+- 
+- 
+- 
+
+### 유튜브API (YouTube)
+#### : https://developers.google.com/youtube/v3/getting-started?hl=ko
+- 
+- 
+- 
+
 ### 🎬 페이지 스크린샷
 1) 
 
@@ -139,8 +179,9 @@ React에 다양한 API로 서울시의 체육시설 공공서비스 예약안내
 
 <img src="" alt="" />
 
+<br />
 
-### ⚙️ 기술스택
+## ⚙️ 기술 스택
 - React.js
 <div align=“center”>
 <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black">
@@ -192,29 +233,5 @@ React에 다양한 API로 서울시의 체육시설 공공서비스 예약안내
 <div align=“center”>
 	  <img src="https://img.shields.io/badge/vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">
   </div>
-  
-## 📌 주요 기능
 
-### 지도API (네이버지도)
-#### : https://www.ncloud.com/product/applicationService/maps
-- 
--  
-- 
-
-### 공공데이터API (서울시 체육시설 공공서비스 예약)
-#### : http://data.seoul.go.kr/dataList/OA-2266/S/1/datasetView.do
-- 
-- 
-- 
-
-### 날씨API (Open Weather Map)
-#### : https://openweathermap.org/api
-- 
-- 
-- 
-
-### 유튜브API (YouTube)
-#### : https://developers.google.com/youtube/v3/getting-started?hl=ko
-- 
-- 
-- 
+<br />
