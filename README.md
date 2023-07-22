@@ -117,20 +117,26 @@ React에 다양한 API들로 서울시의 체육시설 공공서비스 예약안
   
 ## 📌 주요 기능
 
-#### 홈 페이지
-
+#### 지도API
+네이버지도: https://www.ncloud.com/product/applicationService/maps
 - 
 -  
 - 
 
-#### 지도
-
+#### 공공데이터API
+서울시 체육시설 공공서비스 예약: http://data.seoul.go.kr/dataList/OA-2266/S/1/datasetView.do
 - 
 - 
 - 
 
-#### 게시물 상세 / 댓글
+#### 날씨API
+Open Weather Map: https://openweathermap.org/api
+- 
+- 
+- 
 
+#### 유튜브API
+YouTube: https://developers.google.com/youtube/v3/getting-started?hl=ko
 - 
 - 
 - 
