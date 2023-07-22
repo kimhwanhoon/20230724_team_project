@@ -1,3 +1,4 @@
+<img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90" />
 ### 실행법
 
 1. `yarn`으로 패키지 설치
@@ -23,9 +24,9 @@ React와 여러API들을 이용한 서울시 체육시설 공공서비스 예약
 
 ### 🧑‍🤝‍🧑 멤버 구성 - 팀명 : 내 코드 왜2러조
 - 팀원1 : 김환훈 - 
-- 팀원2 : 김우리 - 
+- 팀원2 : 김우리 - weather API 렌더링(<Home/> -> <Header/>) / 유튜브 API shuffle 렌더링 / css Frame 
 - 팀원3 : 박지원 - 
-- 팀원4 : 조성록 - 
+- 팀원4 : 조성록 - weather API 렌더링, 댓글 추가, 수정 및 삭제 기능 구현 / error shooter
 - 팀원5 : 최수아 - 
 
 🎬 페이지 스크린샷
