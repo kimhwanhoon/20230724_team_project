@@ -34,8 +34,7 @@ React에 다양한 API로 서울시의 체육시설 공공서비스 예약안내
 
 ### 🖼 와이어프레임
 <details>
-<summary>클릭하면 자세한 내용이 보입니다</summary>
-Figma: https://www.figma.com/community/file/1264539931329446342
+<summary><a href="https://www.figma.com/community/file/1264539931329446342">Figma</a> | 펼칠 시 스크린샷</summary>
 	
 ![123](https://github.com/kimhwanhoon/20230724_team_project/assets/123552221/45f102ee-ba89-442f-b7ea-4bc9cf0637e8)
 
@@ -151,12 +150,12 @@ Figma: https://www.figma.com/community/file/1264539931329446342
 ### ⚙️ 사용한 라이브러리
 - styled-components
 - react-router-dom
+- react-redux
 - redux-toolkit
 - redux-devtools-extension
 - react-query
 - react-query-devtools
 - react-js-paginaition
-- react-redux
 - react-naver-maps
 - axios
 - cors
@@ -164,10 +163,10 @@ Figma: https://www.figma.com/community/file/1264539931329446342
 - express
 - weather-styled-icon
 
-
 <div align=“center”>
-<img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=git&logoColor=white">
-
+<img src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white"> <img src="https://img.shields.io/badge/React Router DOM-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white"> <img src="https://img.shields.io/badge/Redux Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white">
+	
+<img src="https://img.shields.io/badge/React Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white"> <img src="https://img.shields.io/badge/React Naver Maps-03C75A?style=for-the-badge&logo=naver&logoColor=white"> <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white"> <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white">
 </div> 
 
 ### ⚙️ 버전 관리 시스템
@@ -188,7 +187,7 @@ Figma: https://www.figma.com/community/file/1264539931329446342
  <img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=slack&logoColor=white">
 </div>
 
-⚙️ 배포 
+### ⚙️ 배포 
 - Vercel
 <div align=“center”>
 	  <img src="https://img.shields.io/badge/vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">
