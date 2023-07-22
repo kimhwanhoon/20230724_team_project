@@ -36,9 +36,13 @@ React에 다양한 API로 서울시의 체육시설 공공서비스 예약안내
 <details>
 <summary>클릭하면 자세한 내용이 보입니다</summary>
 Figma: https://www.figma.com/community/file/1264539931329446342
+	
 ![123](https://github.com/kimhwanhoon/20230724_team_project/assets/123552221/45f102ee-ba89-442f-b7ea-4bc9cf0637e8)
+
 ![456](https://github.com/kimhwanhoon/20230724_team_project/assets/123552221/938892b3-c550-49cd-b729-cd9fe73e206a)
+
 ![](https://files.slack.com/files-pri/T043597JK8V-F05J9NAQSHZ/789.jpg)
+
 </details>
 
 
