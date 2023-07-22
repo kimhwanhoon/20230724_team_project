@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=GongGong%20Play&fontSize=90" />
+<img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=GongGong%20Play&fontSize=60" />
 ### 실행법
 
 1. `yarn`으로 패키지 설치
