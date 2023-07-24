@@ -11,19 +11,20 @@
 
 ## 🖥️ 프로젝트 개요
 
-- React.js로 빌드한 서울시 공공서비스 체육시설 조회 및 예약안내 사이트입니다.
+- React.js로 빌드한 서울시 공공서비스 체육시설 조회 및 예약안내 사이트입니다
+- naver map api, 서울시 공공 체육시설 api, open weather map api, youtube data api를 활용하여 다채로운 페이지 구성을 하였습니다
 
 <br />
 
 ### 📍 사이트 주소
 
-// 주소넣기
+// 배포시 주소넣기
 
 <br />
 
 ### 🕰️ 개발 기간
 
-2023. 7.  17 - 2023. 07. 23
+2023.07.17 - 2023.07.23
 
 <br />
 
@@ -116,13 +117,13 @@
 - 팀명 : 내 코드 왜2러조
 - 팀원 및 담당 구현 기능
 
-| 역할 | 이름   | 담당 구현 기능                   | GitHub                                                                      |
-| ---- | ------ | -------------------------------- | --------------------------------------------------------------------------- |
-| 팀장 | 김환훈 | 지도 API                         | <a href="https://github.com/kimhwanhoon">https://github.com/kimhwanhoon</a> |
-| 팀원 | 김우리 | 날씨API, 유튜브 API              | <a href="https://github.com/wooriki">https://github.com/wooriki</a>         |
-| 팀원 | 박지원 | 공공API 데이터 페이지네이션      | <a href="https://github.com/xoxojw">https://github.com/xoxojw</a>           |
-| 팀원 | 조성록 | 날씨API, 상세 페이지, 댓글 기능  | <a href="https://github.com/pigrok">https://github.com/pigrok</a>           |
-| 팀원 | 최수아 | 공공API 데이터 검색 및 필터 기능 | <a href="https://github.com/choisua98">https://github.com/choisua98</a>     |
+| 역할 | 이름   | 담당 구현 기능                             | GitHub                                                                      |
+| ---- | ------ | ------------------------------------------ | --------------------------------------------------------------------------- |
+| 팀장 | 김환훈 | 지도 API, express 서버, 컴포넌트간 데이터 연결                                   | <a href="https://github.com/kimhwanhoon">https://github.com/kimhwanhoon</a> |
+| 팀원 | 김우리 | 날씨API, 유튜브 API                        | <a href="https://github.com/wooriki">https://github.com/wooriki</a>         |
+| 팀원 | 박지원 | 공공API 데이터 페이지네이션                | <a href="https://github.com/xoxojw">https://github.com/xoxojw</a>           |
+| 팀원 | 조성록 | 날씨API, 상세 페이지, 댓글 기능, 검색 기능 | <a href="https://github.com/pigrok">https://github.com/pigrok</a>           |
+| 팀원 | 최수아 | 공공API 데이터 검색 및 필터 기능           | <a href="https://github.com/choisua98">https://github.com/choisua98</a>     |
 
 <br />
 
@@ -130,17 +131,16 @@
 
 ### 지도API <a href="https://www.ncloud.com/product/applicationService/maps">네이버 지도</a>
 
--
--
--
+- 공공데이터API에서 불러온 데이터에서 위도와 경도를 활용하여 네이버 맵에 핀을 찍는다
+- reverse geocoding api를 통해 위도와 경도를 통해서 도로명주소로 변환한다
 
 ### 공공데이터API <a href="http://data.seoul.go.kr/dataList/OA-2266/S/1/datasetView.do">서울시 체육시설 공공서비스 예약</a>
 
-• react query, axios 활용하여 서울시 공공API 데이터 GET 요청
-• 검색창 필터링으로 공공데이터 필터기능 구현
-• 필터링 된 API 데이터를 pagination 기능으로 painting
-• 불러온 API 데이터를 사용자 위치 정보에 따라 가까운 순으로 정렬
-• 거리 순으로 정렬된 데이터를 react-js-pagination 라이브러리 활용하여 페이지네이션
+- react query, axios 활용하여 서울시 공공API 데이터 GET 요청
+- 검색창 필터링으로 공공데이터 필터기능 구현
+- 필터링 된 API 데이터를 `pagination` 기능으로 `painting`
+- 불러온 API 데이터를 사용자 위치 정보에 따라 가까운 순으로 정렬
+- 거리 순으로 정렬된 데이터를 `react-js-pagination` 라이브러리 활용하여 페이지네이션
 
 ### 날씨API <a href="https://openweathermap.org/api">Open Weather Map</a>
 
@@ -155,41 +155,55 @@
 - API 요청 매개변수와 일치하는 재생목록의 모음을 반환받아 axios get 요청으로 상세 데이터를 불러온다
 - 필요한 값을 return 해주며 List를 shuffle하여 브라우저에 렌더링한다
 
+<br />
+<br />
+
 ### 🎬 페이지 스크린샷
 
-1.
+#### 1. 메인화면
+   
+ ![01 main](https://github.com/kimhwanhoon/20230724_team_project/assets/123552221/5ab477e2-534a-46ff-97c6-e4a09e8ffa23)
 
-<img src="https://user-images.githubusercontent.com/109304556/255329321-e56d3a92-947a-4e6a-afc6-3cae6a03f4a6.jpg" alt="" />
+	1) Header - 검색창 카테고리 필터 : 사용자가 운동종목과 지역구를 선택하여 데이터 필터링
+	2) Header - 날씨 API : 사용자 현재 위치에 따른 날씨 및 시간 보여주기
+	3) Body - map API :  사용자 현재 위치에서 가까운 데이터 보여주기
+	4) Body - Youtube API : 추천 음악 리스트 가져오기 ( 새로고침 할 때 새로운 리스트로 바뀜 )
+	5) Body - 공공데이터 API : 사용자 현재 위치와 가까운 순으로 데이터 페이지네이션
 
-2.
+<br />
 
-<img src="" alt="" />
+#### 2. 검색카테고리 필터링 구현
 
-3.
+![02 filtering](https://github.com/kimhwanhoon/20230724_team_project/assets/123552221/bea72f59-3c81-44df-b9ab-a82128948776)
 
-<img src="" alt=""/>
+<br />
 
-2-1)
+#### 3. 검색기능 구현
 
-<img src="" alt=""/>
+![03 searching](https://github.com/kimhwanhoon/20230724_team_project/assets/123552221/8154c0ca-01f0-4072-b211-298edcfcb9c5)
 
-3.
+<br />
 
-3-1)
+#### 4. 게시물 디테일 화면
 
-<img src="" alt=""/>
+![04 detail](https://github.com/kimhwanhoon/20230724_team_project/assets/123552221/7241e40f-147e-4690-a595-4281c9adae2a)
 
-3-2)
+<br />	
+ 
+#### 5. 게시물 디테일 -  댓글기능
 
-<img src="" alt="" />
+![05 comment](https://github.com/kimhwanhoon/20230724_team_project/assets/123552221/2a0a4e0f-ce44-4032-95fa-72288c4d4933)
 
-3-3)
+	1) 댓글 수정/삭제기능 구현
+ 	2) 랜덤으로 프로필 사진 생성
+  
+<br />
 
-<img src="" alt=""/>
+#### 6. 반응형 구현
 
-4.
+![small](https://github.com/kimhwanhoon/20230724_team_project/assets/109304556/d6907671-c743-49dd-8bca-b504238a363f)
 
-<img src="" alt="" />
+
 
 <br />
 
@@ -219,18 +233,18 @@
 - weather-styled-icon
 
 <div align=“center”>
-<img src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white"> <img src="https://img.shields.io/badge/React Router DOM-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white"> <img src="https://img.shields.io/badge/Redux Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white">
+<img src="https://img.shields.io/badge/styled components-e62744?style=for-the-badge&logo=styledcomponents&logoColor=white"> <img src="https://img.shields.io/badge/React Router DOM-ed7a40?style=for-the-badge&logo=reactrouter&logoColor=white"> <img src="https://img.shields.io/badge/Redux Toolkit-e0a538?style=for-the-badge&logo=redux&logoColor=white">
 	
-<img src="https://img.shields.io/badge/React Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white"> <img src="https://img.shields.io/badge/React Naver Maps-03C75A?style=for-the-badge&logo=naver&logoColor=white"> <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white"> <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white">
+<img src="https://img.shields.io/badge/React Query-32b3bf?style=for-the-badge&logo=reactquery&logoColor=white"> <img src="https://img.shields.io/badge/React Naver Maps-03C75A?style=for-the-badge&logo=naver&logoColor=white"> <img src="https://img.shields.io/badge/Axios-3261bf?style=for-the-badge&logo=axios&logoColor=white"> <img src="https://img.shields.io/badge/Express-4a32bf?style=for-the-badge&logo=express&logoColor=white">
 </div>
 
 ### ⚙️ 버전 관리 시스템
 
 - Git/Github
 <div align=“center”>
- <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
- <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
- <img src="https://img.shields.io/badge/sourcetree-0052CC?style=for-the-badge&logo=github&logoColor=white">
+ <img src="https://img.shields.io/badge/git-7f8c8f?style=for-the-badge&logo=git&logoColor=white">
+ <img src="https://img.shields.io/badge/github-595f61?style=for-the-badge&logo=github&logoColor=white">
+ <img src="https://img.shields.io/badge/sourcetree-373c3d?style=for-the-badge&logo=sourcetree&logoColor=white">
 </div>
 
 ### ⚙️ 협업툴
@@ -239,16 +253,8 @@
 - Slack
 - Figma
 <div align=“center”>
- <img src="https://img.shields.io/badge/visualstudio-5C2D91?style=for-the-badge&logo=visualstudio&logoColor=white">
- <img src="https://img.shields.io/badge/slack-4A154B?style=for-the-badge&logo=slack&logoColor=white">
- <img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=slack&logoColor=white">
+ <img src="https://img.shields.io/badge/visual studio code-cf72ae?style=for-the-badge&logo=visualstudiocode&logoColor=white">
+ <img src="https://img.shields.io/badge/slack-ad498a?style=for-the-badge&logo=slack&logoColor=white">
+ <img src="https://img.shields.io/badge/figma-822f65?style=for-the-badge&logo=slack&logoColor=white">
 </div>
 
-### ⚙️ 배포
-
-- Vercel
-<div align=“center”>
-	  <img src="https://img.shields.io/badge/vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">
-  </div>
-
-<br />
